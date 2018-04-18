@@ -1,0 +1,28 @@
+---
+- include: check-env.yml
+  tags:
+    - kafka-install
+    - kafka-cfg
+    - check-env
+
+- include: system.yml
+  tags:
+    - kafka-install
+    - kafka-cfg
+
+- include: limits.yml
+  tags:
+    - kafka-cfg
+    - limits
+
+- include: kafka-install.yml
+  tags:
+    - kafka-install
+
+- include: kafka-cfg.yml
+  tags:
+    - kafka-cfg
+
+- include: kafka-test.yml
+  tags:
+    - kafka-test

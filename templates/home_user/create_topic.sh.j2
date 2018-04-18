@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+cd  /usr/local/kafka/
+bin/kafka-topics.sh --create \
+    --zookeeper {{ zookeeper_connection_string }}  \
+    --replication-factor 3 \
+    --partitions 13 \
+    --topic mytopic

@@ -1,0 +1,9 @@
+---
+
+- name: "Render and write out kafka configuration files"
+  template: src=home_user/{{ item }}.j2 dest="/home/{{ ansible_user }}/{{ item }}" mode=0750 owner={{  ansible_user}} 
+  sudo: yes
+  with_items:
+    - create_consumer.sh
+    - create_producer.sh
+    - create_topic.sh
